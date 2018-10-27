@@ -1,5 +1,3 @@
-#![feature(box_syntax)]
-
 #![feature(test)]
 extern crate test;
 
@@ -10,7 +8,7 @@ const ARENA_SIZE: u64 = 10_000_000;
 type VXArray = [u64; ARENA_SIZE as usize];
 
 fn make_vx_array() -> Box<VXArray> {
-    box [10u64; ARENA_SIZE as usize]
+    Box::new(*&[10u64; ARENA_SIZE as usize])
 }
 
 #[bench]
