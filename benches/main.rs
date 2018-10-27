@@ -1,6 +1,6 @@
 #![feature(test)]
-
 extern crate test;
+
 use test::{black_box, Bencher};
 
 const ARENA_SIZE: u64 = 10_000_000;
