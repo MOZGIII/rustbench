@@ -3,7 +3,7 @@
 extern crate test;
 use test::{black_box, Bencher};
 
-const ARENA_SIZE: u64 = 200_000_000;
+const ARENA_SIZE: u64 = 10_000_000;
 
 fn make_vx() -> Vec<u64> {
     use std::iter::FromIterator;
